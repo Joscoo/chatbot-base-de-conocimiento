@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Base de Conocimiento</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Dialogflow Messenger CSS -->
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-robot me-2"></i>
+                Chatbot ESPOCH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chatbot">Agente Pancho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section text-white text-center py-5">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Chatbot Inteligente
+                        <span class="text-warning">ESPOCH</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Un asistente virtual avanzado basado en inteligencia artificial para ayudarte con información académica y consultas generales. Creado por José Bonilla -7246
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="#chatbot" class="btn btn-warning btn-lg px-4">
+                            <i class="bi bi-robot me-2"></i>
+                            Conocer a Pancho
+                        </a>
+                        <a href="#sobre" class="btn btn-outline-light btn-lg px-4">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Más Info
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="robot-animation">
+                        <i class="bi bi-robot display-1 text-warning"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light" id="caracteristicas">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Características Principales</h2>
+                    <p class="lead text-muted">
+                        Nuestro chatbot está diseñado para ofrecer la mejor experiencia de usuario
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-lightning-charge text-primary display-4"></i>
+                            </div>
+                            <h5 class="card-title">Respuestas Rápidas</h5>
+                            <p class="card-text text-muted">
+                                Obtén respuestas instantáneas a tus consultas académicas y administrativas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-brain text-success display-4"></i>
+                            </div>
+                            <h5 class="card-title">IA Avanzada</h5>
+                            <p class="card-text text-muted">
+                                Utiliza inteligencia artificial para comprender mejor tus preguntas y necesidades.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-clock-history text-warning display-4"></i>
+                            </div>
+                            <h5 class="card-title">24/7 Disponible</h5>
+                            <p class="card-text text-muted">
+                                Acceso continuo al chatbot, disponible las 24 horas del día, todos los días.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agente Pancho Section -->
+    <section id="chatbot" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="display-4 fw-bold mb-3">
+                            Conoce a <span class="text-primary">Agente Pancho</span>
+                        </h2>
+                        <p class="lead text-muted mb-4">
+                            Tu asistente virtual inteligente potenciado por IA de Google
+                        </p>
+                    </div>
+                    
+                    <!-- Pancho Presentation -->
+                    <div class="row align-items-center mb-5">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div class="pancho-avatar text-center">
+                                <div class="avatar-container">
+                                    <i class="bi bi-robot display-1 text-primary pancho-icon"></i>
+                                    <div class="pulse-ring"></div>
+                                    <div class="pulse-ring-2"></div>
+                                </div>
+                                <h3 class="mt-4 fw-bold text-primary">¡Hola, soy Pancho!</h3>
+                                <p class="text-muted">Tu compañero IA siempre disponible</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="features-list">
+                                <div class="feature-item d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="bi bi-chat-dots-fill text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Conversación Natural</h5>
+                                        <p class="text-muted mb-0">Habla conmigo como lo harías con un amigo</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="bi bi-lightbulb-fill text-warning"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Respuestas Inteligentes</h5>
+                                        <p class="text-muted mb-0">IA avanzada para ayudarte mejor</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item d-flex align-items-center mb-3">
+                                    <div class="feature-icon me-3">
+                                        <i class="bi bi-clock-fill text-info"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Disponible 24/7</h5>
+                                        <p class="text-muted mb-0">Siempre aquí cuando me necesites</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item d-flex align-items-center">
+                                    <div class="feature-icon me-3">
+                                        <i class="bi bi-shield-check-fill text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Información Confiable</h5>
+                                        <p class="text-muted mb-0">Datos verificados sobre ESPOCH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center">
+                        <div class="cta-card p-5 rounded-4 bg-gradient-primary text-white position-relative overflow-hidden">
+                            <div class="position-relative z-index-2">
+                                <h3 class="fw-bold mb-3">¿Listo para comenzar?</h3>
+                                <p class="lead mb-4">
+                                    Haz clic en el botón flotante azul en la esquina inferior derecha para chatear conmigo
+                                </p>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <span class="me-3">Búscame aquí</span>
+                                    <i class="bi bi-arrow-down-right display-6 bounce-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="cta-bg-pattern"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="text-center">
+                        <i class="bi bi-mortarboard display-1 text-primary"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Acerca del Proyecto</h2>
+                    <p class="lead mb-4">
+                        Este chatbot fue desarrollado como parte del proyecto de Base de Conocimiento 
+                        del 7mo semestre de la Escuela Superior Politécnica de Chimborazo.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Interfaz moderna</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Responsive design</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Fácil de usar</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Open source</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Contacto</h2>
+                    <p class="lead text-muted">
+                        ¿Tienes preguntas o sugerencias? ¡Nos encantaría escucharte!
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item p-4">
+                                <i class="bi bi-geo-alt text-primary display-5 mb-3"></i>
+                                <h5>Ubicación</h5>
+                                <p class="text-muted">ESPOCH<br>Riobamba, Ecuador</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item p-4">
+                                <i class="bi bi-envelope text-primary display-5 mb-3"></i>
+                                <h5>Email</h5>
+                                <p class="text-muted">contacto@espoch.edu.ec</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item p-4">
+                                <i class="bi bi-phone text-primary display-5 mb-3"></i>
+                                <h5>Teléfono</h5>
+                                <p class="text-muted">+593 3 2998-200</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        &copy; 2025 Chatbot ESPOCH. Proyecto académico de Base de Conocimiento.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="#" class="text-white me-3">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-white">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dialogflow Messenger -->
+    <df-messenger
+      project-id="seraphic-vertex-473714-e0"
+      agent-id="9bdf379d-7b52-43e1-9478-d515be5d9b46"
+      language-code="es"
+      max-query-length="-1">
+      <df-messenger-chat-bubble
+        chat-title="AGENTE PANCHO">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Dialogflow Messenger JS -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
